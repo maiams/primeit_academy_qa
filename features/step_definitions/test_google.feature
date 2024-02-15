@@ -15,5 +15,11 @@ Feature: Google search
     When Page loads
     Then User must see "batata" related results
 
+  Scenario: Google search image
+    Given User search for "estadio"
+    When Page loads
+    Then User must see "batata" related results
+
+
 
     
