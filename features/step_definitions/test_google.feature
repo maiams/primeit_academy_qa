@@ -13,7 +13,7 @@ Feature: Google search
   Scenario: Google search for text
     Given User search for "batata"
     When Page loads
-    Then User must see "batata" related results
+    Then User must see "cenoura" related results
 
   Scenario: Failing test
     Given User search for "primeit"
