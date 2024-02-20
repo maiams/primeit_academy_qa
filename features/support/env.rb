@@ -3,22 +3,19 @@ require 'selenium/webdriver'
 require 'rspec'
 require 'rspec/expectations'
 
-
-
 include RSpec::Matchers
 
 ROOT_PATH = File.expand_path('../..',File.dirname(__FILE__))
-EXPLICIT_WAIT_TIMEOUT = 20
-IMPLICIT_WAIT_TIMEOUT = 40
-WAIT_BETWEEN_STEPS = 8
-
+EXPLICIT_WAIT_TIMEOUT = 5
+IMPLICIT_WAIT_TIMEOUT = 10
+WAIT_BETWEEN_STEPS = 1
 
 Capybara.register_driver :webdriver do |app|
-  options = Selenium::WebDriver::Firefox::Options.new
-  options.add_argument('-width=1920')
-  options.add_argument('-height=1080')
+ options = Selenium::WebDriver::Firefox::Options.new
+ options.add_argument('-width=1920')
+ options.add_argument('-height=1080')
 
-  Capybara::Selenium::Driver.new app, browser: :firefox, options: options
+ Capybara::Selenium::Driver.new app, browser: :firefox, options: options
 end
 
 
