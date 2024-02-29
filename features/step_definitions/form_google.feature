@@ -8,5 +8,9 @@ Feature: Google form
     Given User open a new browser
     When User go to "https://forms.gle/n3tMSHrF2EGEg3Gd8"
     Then User must see the google forms page
-    Then User must set option to TRUE
-    Then User must fill in text input with "AULA"
+    And User must set option to TRUE
+    And User must fill in text input with "RUI"
+    And User must check value "BRASIL"
+    And User must check value "PORTUGAL"
+    And User set date as "25/02/2024"
+    And User click to submit form
